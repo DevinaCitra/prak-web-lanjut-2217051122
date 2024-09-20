@@ -77,7 +77,7 @@
 
 <body>
     <div class="profile-container">
-        <img src="https://i.pinimg.com/originals/b1/e1/b3/b1e1b394c57fc76af307a4b066b6cfc2.jpg" alt="kucing imut">
+    <img src="{{ asset('assets/img/kucing.jpg') }}" alt="Kucing">
         <div class="info">
             <strong>Nama:</strong> <?= $nama ?>
         </div>
