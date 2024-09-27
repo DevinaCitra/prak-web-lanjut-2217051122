@@ -82,12 +82,17 @@
             <strong>Nama:</strong> <?= $nama ?>
         </div>
         <div class="info">
-            <strong>Kelas:</strong> <?= $kelas ?>
+            <strong>Kelas:</strong> <?= $nama_kelas ?>
         </div>
         <div class="info">
             <strong>NPM:</strong> <?= $npm ?>
         </div>
     </div>
+
+    <!-- <h1>Profile User</h1>
+    <p>Nama: {{ $nama }}</p>
+    <p>NPM: {{ $npm }}</p>
+    <p>Kelas: {{ $nama_kelas ?? 'Kelas tidak ditemukan' }}</p> -->
 </body>
 
 </html>
