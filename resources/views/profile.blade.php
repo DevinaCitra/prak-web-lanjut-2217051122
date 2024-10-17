@@ -77,22 +77,17 @@
 
 <body>
     <div class="profile-container">
-    <img src="{{ asset('assets/img/kucing.jpg') }}" alt="Kucing">
+    <img src="{{ asset('upload/img/' . $user->foto) }}" alt="foto-profile">
         <div class="info">
-            <strong>Nama:</strong> <?= $nama ?>
+            <strong>Nama:</strong> <?= $user->nama ?>
         </div>
         <div class="info">
-            <strong>Kelas:</strong> <?= $nama_kelas ?>
+            <strong>Kelas:</strong> <?= $user->nama_kelas ?>
         </div>
         <div class="info">
-            <strong>NPM:</strong> <?= $npm ?>
+            <strong>NPM:</strong> <?= $user->npm ?>
         </div>
     </div>
-
-    <!-- <h1>Profile User</h1>
-    <p>Nama: {{ $nama }}</p>
-    <p>NPM: {{ $npm }}</p>
-    <p>Kelas: {{ $nama_kelas ?? 'Kelas tidak ditemukan' }}</p> -->
 </body>
 
 </html>
