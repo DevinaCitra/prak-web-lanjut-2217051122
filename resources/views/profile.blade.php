@@ -77,15 +77,16 @@
 
 <body>
     <div class="profile-container">
-    <img src="{{ asset('upload/img/' . $user->foto) }}" alt="foto-profile">
+        <!-- Ensure proper path to the image using Blade syntax -->
+        <img src="{{ asset('upload/img/' . $user->foto) }}" alt="foto-profile">
         <div class="info">
-            <strong>Nama:</strong> <?= $user->nama ?>
+            <strong>Nama:</strong> {{ $user->nama }}
         </div>
         <div class="info">
-            <strong>Kelas:</strong> <?= $user->nama_kelas ?>
+            <strong>Kelas:</strong> {{ $user->nama_kelas }}
         </div>
         <div class="info">
-            <strong>NPM:</strong> <?= $user->npm ?>
+            <strong>NPM:</strong> {{ $user->npm }}
         </div>
     </div>
 </body>
