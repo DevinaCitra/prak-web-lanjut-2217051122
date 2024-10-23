@@ -9,10 +9,10 @@
             <label for="nama" class="form-label" style="color: #ff66b3;">Nama:</label>
             <input type="text" id="nama" name="nama" class="form-control" style="border: 2px solid #ff66b3;" required>
         </div>
-        <div class="mb-3">
+        <!-- <div class="mb-3">
             <label for="npm" class="form-label" style="color: #ff66b3;">NPM:</label>
             <input type="text" id="npm" name="npm" class="form-control" style="border: 2px solid #ff66b3;" required>
-        </div>
+        </div> -->
         <div class="mb-3">
             <label for="kelas_id" class="form-label" style="color: #ff66b3;">Kelas:</label>
             <select name="kelas_id" id="kelas_id" class="form-select" style="border: 2px solid #ff66b3;" required>
@@ -22,6 +22,12 @@
                 @endforeach
             </select>
         </div>
+
+        <div class="mb-3">
+            <label for="ipk" class="form-label" style="color: #ff66b3;">IPK</label>
+            <input style="border: 2px solid #ff66b3;" name="ipk" id="ipk" class="form-control" step="0.01" min="0" max="4.00" placeholder="Masukkan IPK">
+        </div>
+
         <div class="mb-3">
             <label for="foto">Foto:</label><br>
             <input type="file" id="foto" name="foto"><br><br>

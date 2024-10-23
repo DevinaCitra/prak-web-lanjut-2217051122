@@ -30,8 +30,9 @@
                 <tr>
                     <th>ID</th>
                     <th>Nama</th>
-                    <th>NPM</th>
+                    <th>IPK</th>
                     <th>Kelas</th>
+                    <th>Foto</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
@@ -40,9 +41,19 @@
                 <tr>
                     <td>{{ $user->id }}</td> 
                     <td>{{ $user->nama }}</td>
-                    <td>{{ $user->npm }}</td>
-                    <td>{{ $user->nama_kelas }}</td>    
-                    <td><a href="{{ route('user.show', $user->id) }}" class = "btn btn-warning mb-3">Detail</a></td>
+                    <td>{{ $user->ipk }}</td>
+                    <td>{{ $user->nama_kelas }}</td>  
+                     
+                    <td><img src="{{ asset('upload/img/' . $user->foto) }}" alt="foto profile" class="img-thumbnail" style="width: 100px; height: 100px;"></td> 
+                    <td>
+                        <a href="{{ route('user.show', $user->id) }}" class = "btn btn-primary mb-3 d-inline-block">Detail</a>
+                        <a href="{{ route('user.edit', $user->id) }}" class = "btn btn-warning mb-3 d-inline-block">Edit</a>
+                        <form action="{{ route('user.destroy', $user->id) }}" method="POST" class = "d-inline-block">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class = "btn btn-danger mb-3" onclick="showDeleteConfirmation('delete-form-{{ $user->id }}')">Delete</button>
+                        </form>
+                    </td>
                 </tr>
                 @endforeach
             </tbody>
